@@ -1,0 +1,23 @@
+<!-- Include A-Frame and AR.js libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@ijraidy/madscientistlab@0.0.1/aframe-master.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ijraidy/madscientistlab@0.0.1/aframe-ar.js"></script>
+<script>ARjs.Context.baseURL = 'https://threejs.org/'</script>
+
+<!-- Create an A-Frame scene with AR.js -->
+<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+
+  <!-- Create an anchor to attach your AR content -->
+  <a-anchor hit-testing-enabled="true">
+
+    <!-- Add your AR content here -->
+    <a-entity gltf-model="https://raw.githubusercontent.com/ijraidy/madscientistlab/main/cog.gltf"
+              scale="0.1 0.1 0.1"
+              position="0 0 -1"
+              rotation="0 180 0"></a-entity>
+
+  </a-anchor>
+
+  <!-- Define a static camera -->
+  <a-camera-static></a-camera-static>
+
+</a-scene>
